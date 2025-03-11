@@ -75,10 +75,10 @@ public class Main {
 	
 	
 	private static void addTask(TaskDAO dao, Scanner scanner) throws SQLException {
-		String conent = "";
-		while(conent.isEmpty()) {
+		String content = "";
+		while(content.isEmpty()) {
 			System.out.println("内容を入力してください。[必須]");
-			conent = scanner.nextLine().trim();
+			content = scanner.nextLine().trim();
 		}
 		
 		Date deadline = null;
@@ -92,7 +92,7 @@ public class Main {
 			}
 		}
 		
-		dao.add(conent, deadline);
+		dao.add(content, deadline);
 	}
 	
 	
@@ -104,10 +104,10 @@ public class Main {
 			id = Integer.parseInt(idString);
 		}
 		
-		String conent = "";
-		while(conent.isEmpty()) {
+		String content = "";
+		while(content.isEmpty()) {
 			System.out.println("内容を入力してください。[必須]");
-			conent = scanner.nextLine().trim();
+			content = scanner.nextLine().trim();
 		}
 		
 		Date deadline = null;
@@ -121,7 +121,7 @@ public class Main {
 			}
 		}
 		
-		dao.update(id, conent, deadline);
+		dao.update(id, content, deadline);
 	}
 
 	
